@@ -1,41 +1,11 @@
-import React, { useState } from "react";
-import {
-  SafeAreaView,
-  StyleSheet,
-  Text,
-  View,
-  Button,
-  Linking,
-  TextInput,
-  ScrollView,
-  Image,
-  Logo,
-  TouchableOpycity,
-  Alert,
-} from "react-native";
-import ScrollViewContext from "react-native/Libraries/Components/ScrollView/ScrollViewContext";
-import Heding from "./components/Heading";
-import ButtonBC from "./components/ButtonBC";
+import { StyleSheet, Text, View, TextInput } from "react-native";
+import Heading from "../components/Heading";
+import ButtonBC from "../components/ButtonBC";
 
-const Login = () => {
-  const [name, setName] = useState("");
-  const [password, setPassword] = useState("");
-  const [submitted, SetSubmitted] = useState(false);
-
-  const onPressHendler = () => {
-    if (name.length > 2 && password.length > 3) {
-      SetSubmitted(!submitted);
-    } else {
-      Alert.alert("Warning", "The name must be longer then 3 characters", [
-        { text: "OK" },
-        { text: "Cancle" },
-      ]);
-    }
-  };
-
+const LoginScreen = () => {
   return (
     <View style={styles.body}>
-      <Heding />
+      <Heading />
       <View style={styles.view1}>
         <Text style={styles.text}>
           Bee <Text style={styles.text2}>Card</Text>
@@ -49,18 +19,12 @@ const Login = () => {
         <TextInput style={styles.input} placeholder="Lozinka" />
         <Text style={styles.text_left}>Zaboravili ste lozinku?</Text>
       </View>
-      <ButtonBC title={"Prijavi se"} onPressFunction={onPressHendler} />
+      <ButtonBC title={"Prijavi se"} />
       <View style={styles.view_end}>
         <Text style={styles.text1}>
           Još nemate račun?{" "}
           <Text style={styles.text_black}>Napravite račun</Text>
         </Text>
-      </View>
-      <View>
-        <Image
-          style={styles.image}
-          source={require("../src/screens/images/google-logo-825006.png")}
-        ></Image>
       </View>
     </View>
   );
@@ -72,6 +36,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     padding: 0,
     margin: 0,
+    position: "absolute",
   },
 
   view1: {
@@ -101,17 +66,19 @@ const styles = StyleSheet.create({
   view3: {
     flex: 3,
   },
-  image: {
-    width: 40,
-    height: 40,
-    justifyContent: "center",
-    alignItems: "center",
-    marginHorizontal: 190,
-    paddingVertical: 20,
-  },
+
   view_end: {
     paddingBottom: 40,
   },
+  /*footer:{
+    flex: 0.5,  
+    paddingBottom: 0,
+    height:'15%',
+    width:'100%',
+    backgroundColor: '#0E0B26',
+    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20,
+  },*/
 
   text_black: {
     color: "#0E0B26",
@@ -127,4 +94,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Login;
+export default LoginScreen;
