@@ -2,6 +2,7 @@ import { StyleSheet, Text, View, TextInput } from "react-native";
 import Heading from "../components/Heading";
 import ButtonBC from "../components/ButtonBC";
 
+
 const LoginScreen = () => {
   return (
     <View style={styles.body}>
@@ -18,9 +19,12 @@ const LoginScreen = () => {
         />
         <TextInput style={styles.input} placeholder="Lozinka" />
         <Text style={styles.text_left}>Zaboravili ste lozinku?</Text>
+        <ButtonBC title={'Prijava'}
+     />
       </View>
-      <ButtonBC title={"Prijavi se"} />
+      
       <View style={styles.view_end}>
+      
         <Text style={styles.text1}>
           Još nemate račun?{" "}
           <Text style={styles.text_black}>Napravite račun</Text>
@@ -36,7 +40,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     padding: 0,
     margin: 0,
-    position: "absolute",
+    position: "relative",
   },
 
   view1: {

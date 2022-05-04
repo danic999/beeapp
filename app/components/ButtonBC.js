@@ -18,6 +18,9 @@ const styles = StyleSheet.create({
     paddingTop: 10,
     backgroundColor: "#ffc600",
     borderRadius: 8,
+    alignSelf:'center',
+    position:'relative',
+    
   },
   text: {
     color: "#0E0B26",
