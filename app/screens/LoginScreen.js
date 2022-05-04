@@ -8,7 +8,7 @@ const LoginScreen = () => {
       <Heading />
       <View style={styles.view1}>
         <Text style={styles.text}>
-          Bee <Text style={styles.text2}>Card</Text>
+          Radi li git <Text style={styles.text2}>Card</Text>
         </Text>
       </View>
       <View style={styles.view3}>
