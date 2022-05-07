@@ -3,8 +3,11 @@ import Heading from "../components/Heading";
 import ButtonBC from "../components/ButtonBC";
 
 
-const LoginScreen = () => {
+
+const LoginScreen = ({navigation}) => {
+  
   return (
+    
     <View style={styles.body}>
       <Heading />
       <View style={styles.view1}>
@@ -27,7 +30,7 @@ const LoginScreen = () => {
       
         <Text style={styles.text1}>
           Još nemate račun?{" "}
-          <Text style={styles.text_black}>Napravite račun</Text>
+          <Text style={styles.text_black} onPress={() => navigation.navigate('Register')}>Napravite račun</Text>
         </Text>
       </View>
     </View>
