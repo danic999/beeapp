@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, TextInput } from "react-native";
+import { StyleSheet, Text, View, TextInput, Button, Pressable } from "react-native";
 import Heading from "../components/Heading";
 import ButtonBC from "../components/ButtonBC";
 
@@ -12,7 +12,7 @@ const LoginScreen = ({navigation}) => {
       <Heading />
       <View style={styles.view1}>
         <Text style={styles.text}>
-          Bee <Text style={styles.text2}>Card</Text>
+          Bee <Text style={styles.text2} >Card</Text>
         </Text>
       </View>
       <View style={styles.view3}>
@@ -22,8 +22,13 @@ const LoginScreen = ({navigation}) => {
         />
         <TextInput style={styles.input} placeholder="Lozinka" />
         <Text style={styles.text_left}>Zaboravili ste lozinku?</Text>
-        <ButtonBC title={'Prijava'}
-     />
+        
+     <Pressable
+      style={({ pressed }) => [styles.button]}
+      onPress={() => navigation.navigate('Home')}
+    >
+      <Text style={styles.text_button}>{'Prijava'}</Text>
+    </Pressable>
       </View>
       
       <View style={styles.view_end}>
@@ -98,6 +103,21 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     padding: 5,
     marginBottom: 20,
+  },
+  button: {
+    width: 328,
+    height: 48,
+    paddingTop: 10,
+    backgroundColor: "#ffc600",
+    borderRadius: 8,
+    alignSelf:'center',
+    position:'relative',
+    
+  },
+  text_button: {
+    color: "#0E0B26",
+    textAlign: "center",
+    fontSize: 15,
   },
 });
 
