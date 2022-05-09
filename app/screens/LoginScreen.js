@@ -1,18 +1,21 @@
-import { StyleSheet, Text, View, TextInput, Button, Pressable } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  TextInput,
+  Button,
+  Pressable,
+} from "react-native";
 import Heading from "../components/Heading";
 import ButtonBC from "../components/ButtonBC";
 
-
-
-const LoginScreen = ({navigation}) => {
-  
+const LoginScreen = ({ navigation }) => {
   return (
-    
     <View style={styles.body}>
       <Heading />
       <View style={styles.view1}>
         <Text style={styles.text}>
-          Bee <Text style={styles.text2} >Card</Text>
+          Bee <Text style={styles.text2}>Card</Text>
         </Text>
       </View>
       <View style={styles.view3}>
@@ -22,20 +25,24 @@ const LoginScreen = ({navigation}) => {
         />
         <TextInput style={styles.input} placeholder="Lozinka" />
         <Text style={styles.text_left}>Zaboravili ste lozinku?</Text>
-        
-     <Pressable
-      style={({ pressed }) => [styles.button]}
-      onPress={() => navigation.navigate('Home')}
-    >
-      <Text style={styles.text_button}>{'Prijava'}</Text>
-    </Pressable>
+
+        <Pressable
+          style={({ pressed }) => [styles.button]}
+          onPress={() => navigation.navigate("Home")}
+        >
+          <Text style={styles.text_button}>{"Prijava"}</Text>
+        </Pressable>
       </View>
-      
+
       <View style={styles.view_end}>
-      
         <Text style={styles.text1}>
           Još nemate račun?{" "}
-          <Text style={styles.text_black} onPress={() => navigation.navigate('Register')}>Napravite račun</Text>
+          <Text
+            style={styles.text_black}
+            onPress={() => navigation.navigate("Register")}
+          >
+            Napravite račun
+          </Text>
         </Text>
       </View>
     </View>
@@ -103,6 +110,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     padding: 5,
     marginBottom: 20,
+    paddingLeft: 15,
   },
   button: {
     width: 328,
@@ -110,9 +118,8 @@ const styles = StyleSheet.create({
     paddingTop: 10,
     backgroundColor: "#ffc600",
     borderRadius: 8,
-    alignSelf:'center',
-    position:'relative',
-    
+    alignSelf: "center",
+    position: "relative",
   },
   text_button: {
     color: "#0E0B26",
