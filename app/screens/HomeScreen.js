@@ -1,62 +1,32 @@
-import React, { useState } from "react";
+import React from "react";
+import { Text, View, StyleSheet } from "react-native";
 
-import { StyleSheet, Text, View, Image } from "react-native";
-
-const Home = () => {
+import HeadingProfile from "../components/HeadingProfile";
+function HomeScreen(props) {
   return (
-    <View style={styles.heading}>
-      <View style={styles.center}>
-        <Text style={styles.text}>Ukupno bodova</Text>
-        <Text style={styles.text2}>
-          126
-          <Image
-            style={styles.image}
-            source={require("../assets/BeeCard.png")}
-          />
-        </Text>
-      </View>
-
-      <View style={styles.profile}></View>
+    <View style={styles.body}>
+      <HeadingProfile numOfPoints={226}></HeadingProfile>
+      <View style={styles.content}></View>
+      <View style={styles.navigationBar}></View>
     </View>
   );
-};
-
+}
 const styles = StyleSheet.create({
   body: {
     flex: 1,
-    backgroundColor: "#ffff",
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
+    backgroundColor: "red",
   },
-  heading: {
-    paddingTop: 50,
-    flex: 0.15,
-    width: "100%",
-    backgroundColor: "#0D0B26",
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
-    height: 120,
+  content: {
+    backgroundColor: "blue",
+    flex: 0.8,
   },
-  center: {
-    flexDirection: "column",
-    justifyContent: "center",
+  HeadingProfile: {
+    flex: 0.18,
   },
-  text: {
-    color: "#ffffff",
-    fontSize: 20,
-    alignSelf: "flex-start",
-  },
-  text2: {
-    fontSize: 40,
-    color: "#ffffff",
-    alignSelf: "flex-start",
-  },
-  image: {
-    width: 54,
-    height: 42,
+  navigationBar: {
+    backgroundColor: "#f0f",
+    flex: 0.12,
   },
 });
 
-export default Home;
+export default HomeScreen;
