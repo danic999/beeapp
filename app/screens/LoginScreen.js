@@ -9,6 +9,7 @@ import {
 import Heading from "../components/Heading";
 import ButtonBC from "../components/ButtonBC";
 
+
 const LoginScreen = ({ navigation }) => {
   return (
     <View style={styles.body}>
@@ -21,10 +22,12 @@ const LoginScreen = ({ navigation }) => {
       <View style={styles.view3}>
         <TextInput
           style={styles.input}
-          placeholder="Vaš e-mail ili broj kartice"
+          placeholder="Broj kartice"
         />
-        <TextInput style={styles.input} placeholder="Lozinka" />
-        <Text style={styles.text_left}>Zaboravili ste lozinku?</Text>
+        <TextInput style={styles.input}  placeholder="Datum rođenja" />
+        <TextInput style={styles.input} placeholder="E-mail" />
+        <TextInput style={styles.input} secureTextEntry={true} placeholder="Pin" />
+        <Text style={styles.text_left}>Zaboravili ste pin?</Text>
 
         <Pressable
           style={({ pressed }) => [styles.button]}
