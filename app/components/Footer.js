@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, View, StyleSheet, Image, ImageBackground } from "react-native";
-const Footer=({ navigation })=> {
+const Footer=()=> {
   return (
       <View style={styles.navigationBar}>
         <ImageBackground source={require("../assets/Subtract.png")} style={styles.image}>
