@@ -1,6 +1,6 @@
 import React from "react";
-import { Text, View, StyleSheet } from "react-native";
-
+import { Text, View, StyleSheet, Image } from "react-native";
+import Footer from "../components/Footer";
 import HeadingProfile from "../components/HeadingProfile";
 function HomeScreen(props) {
   return (
@@ -10,14 +10,14 @@ function HomeScreen(props) {
         <Text style={styles.text}>Posljednje transakcije  </Text>
         <Text style={styles.text2}>Pogledaj sve</Text>
       </View>
-      <View style={styles.navigationBar}></View>
+      <Footer></Footer>
     </View>
   );
 }
 const styles = StyleSheet.create({
   body: {
     flex: 1,
-    backgroundColor: "red",
+    backgroundColor: "white",
     position:'relative'
   },
   content: {
