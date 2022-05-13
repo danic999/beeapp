@@ -6,7 +6,7 @@ import AuthNavigator from "./app/navigation/AuthNavigator";
 import AppNavigator from "./app/navigation/AppNavigator";
 const App = () => {
   return (
-    <NavigationContainer theme={navigationTheme}>
+    <NavigationContainer>
       <AppNavigator />
     </NavigationContainer>
   );

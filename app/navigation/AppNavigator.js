@@ -1,13 +1,20 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { StyleSheet, ImageBackground } from "react-native";
+
 import Articles from "../screens/Articles";
 import Inbox from "../screens/Inbox";
 import HomeScreen from "../screens/HomeScreen";
 import ShopMap from "../screens/ShopMap";
 import Scanner from "../screens/Scanner";
+
 const Tab = createBottomTabNavigator();
 const AppNavigator = () => (
-  <Tab.Navigator>
+  <Tab.Navigator
+    screenOptions={{
+      tabBarShowLabel: "false",
+    }}
+  >
     <Tab.Screen
       name="Home"
       options={{ headerShown: false }}
@@ -16,7 +23,7 @@ const AppNavigator = () => (
     <Tab.Screen
       name="Inbox"
       options={{ headerShown: false }}
-      component={Inbox}     
+      component={Inbox}
     ></Tab.Screen>
     <Tab.Screen
       name="Scanner"
