@@ -11,6 +11,10 @@ import ButtonBC from "../components/ButtonBC";
 
 
 const LoginScreen = ({ navigation }) => {
+
+  const testFunc=()=>{
+    console.log('test')
+  }
   return (
     <View style={styles.body}>
       <Heading />
@@ -31,7 +35,8 @@ const LoginScreen = ({ navigation }) => {
 
         <Pressable
           style={({ pressed }) => [styles.button]}
-          onPress={() => navigation.navigate("Home")}
+      color
+          onPress={() => testFunc()}
         >
           <Text style={styles.text_button}>{"Prijava"}</Text>
         </Pressable>

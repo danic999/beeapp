@@ -1,6 +1,6 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { StyleSheet, ImageBackground } from "react-native";
+import { StyleSheet, ImageBackground, Text } from "react-native";
 
 import Articles from "../screens/Articles";
 import Inbox from "../screens/Inbox";
@@ -11,13 +11,15 @@ import Scanner from "../screens/Scanner";
 const Tab = createBottomTabNavigator();
 const AppNavigator = () => (
   <Tab.Navigator
+   
     screenOptions={{
-      tabBarShowLabel: "false",
+      tabBarShowLabel: false,
     }}
   >
     <Tab.Screen
       name="Home"
-      options={{ headerShown: false }}
+
+      options={{ headerShown: false, tabBarIcon: (props) => {console.log(props); return (<Text>Tectr</Text>) } }}
       component={HomeScreen}
     ></Tab.Screen>
     <Tab.Screen
