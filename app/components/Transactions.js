@@ -14,7 +14,7 @@ export default function Transactions({ pic, name, date, points }) {
             <Text style={styles.contentInfo}>{name}</Text>
             <Text style={styles.date}>{date}</Text>
           </View>
-          <Text style={styles.numOfPoints}>+ {points}$</Text>
+          <Text style={styles.numOfPoints}>+ {points}</Text>
         </View>
       </View>
     </View>

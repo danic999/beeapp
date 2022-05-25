@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, View, StyleSheet, Image } from "react-native";
-import Footer from "../components/Footer";
+
 import HeadingProfile from "../components/HeadingProfile";
 import Transactions from "../components/Transactions";
 function HomeScreen(props) {
@@ -8,7 +8,7 @@ function HomeScreen(props) {
     <View style={styles.body}>
       <HeadingProfile numOfPoints={226}></HeadingProfile>
       <View>
-        <Text style={styles.text}>Posljednje transakcije </Text>
+        <Text style={styles.text} >Posljednje transakcije </Text>
         <Text style={styles.text2}>Pogledaj sve</Text>
       </View>
       <View style={styles.transactions}>
@@ -20,6 +20,7 @@ function HomeScreen(props) {
         <Transactions name="Namex" date="Sep 25, 01:21 AM" points="25" />
         <Transactions name="Namex" date="Sep 25, 01:21 AM" points="25" />
       </View>
+      
     </View>
   );
 }

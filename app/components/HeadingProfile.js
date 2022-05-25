@@ -1,7 +1,5 @@
 import React from "react";
-
 import { StyleSheet, Text, View, Image } from "react-native";
-
 function HeadingProfile({ numOfPoints }) {
   return (
     <View style={styles.heading}>
@@ -20,6 +18,7 @@ function HeadingProfile({ numOfPoints }) {
         <Image
           style={styles.profilePic}
           source={require("../assets/profilna.jpg")}
+         
         ></Image>
       </View>
     </View>

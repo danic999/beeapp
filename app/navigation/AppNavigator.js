@@ -1,13 +1,11 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { StyleSheet, ImageBackground, Text, Image } from "react-native";
-
+import { StyleSheet, Text, Image } from "react-native";
 import Articles from "../screens/Articles";
 import Inbox from "../screens/Inbox";
 import HomeScreen from "../screens/HomeScreen";
 import ShopMap from "../screens/ShopMap";
 import Scanner from "../screens/Scanner";
-import { backgroundColor } from "react-native/Libraries/Components/View/ReactNativeStyleAttributes";
 
 const Tab = createBottomTabNavigator();
 const AppNavigator = () => (
